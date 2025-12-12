@@ -1,0 +1,951 @@
+/* steinhaeuser.css by Robert Eric Elendt © */
+
+/*MobileFirst*//*MobileFirst*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  transform-origin: top left;
+  font-size: 3.5vw;  
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/ 
+    and (max-width:1032px) {
+      body p {
+        font-size: 2.5vw;
+      }
+      body h2 {
+        font-size: 3vw;
+      }
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  html {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  body p {
+    font-size: 1.5vw;
+  }
+  body h2 {
+    font-size: 1.5vw;
+  }
+  .burger-menu {
+    margin-left: 5vw;
+    height: 5px;
+  }
+  .phone-contact {
+    margin-right: 2%;
+  }
+  .accessibility-widget {
+    margin-right: 6%;
+  }
+}
+@media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
+  body p {
+    font-size: 2vw;
+  }
+  body h2 {
+    font-size: 2.5vw;
+  }
+}
+
+/* Privacy PopUp *//* Privacy PopUp */
+/* Privacy PopUp *//* Privacy PopUp */
+
+/*MobileFirst*//*MobileFirst*/
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.popup-content {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: clamp(20px, 3vw, 40px);
+  border-radius: 12px;
+  width: 70%;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+#popUpOkBtn {
+  font-size: 3.5vw;
+  padding: 5%;
+  margin: 0 auto;
+  width: 50%;
+}
+@media (min-width: 768px)/*IpadView*//*IpadView*/ 
+    and (max-width:1032px) {
+     
+}
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/ 
+  #popUpOkBtn {
+    padding: 1%;
+  }
+}
+
+/* Accessbility Widget *//* Accessbility Widget */
+/* Accessbility Widget *//* Accessbility Widget */
+
+.accessibility-widget {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  z-index: 200;
+  
+}
+#accessibility-btn {
+  
+  background:transparent;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 100%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(2px);
+}
+#accessibility-btn:hover {
+   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(2px); 
+}
+.accessibility-menu {
+  display: none;
+  margin-top: 10px;
+  background:transparent;
+  width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.accessibility-menu button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background:transparent;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+.accessibility-menu button:hover {
+   backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(2px); 
+}
+body.simple-mode video,
+body.simple-mode img,
+body.simple-mode .praxis img {
+  visibility: hidden;
+}
+body.simple-mode {
+  color: black;
+}
+body.simple-mode * {
+  background-image: none !important;
+}
+body.simple-mode .welcome,
+body.simple-mode .about { 
+  color: black;
+  background: none;
+  transform: none;
+  opacity: 1;
+  filter: none;
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  .accessibility-widget {
+    font-size: 1.5vw;
+  }
+}  
+
+/* BurgerDropDownMenu *//* BurgerDropDownMenu */
+/* BurgerDropDownMenu *//* BurgerDropDownMenu */
+
+/*MobileFirst*//*MobileFirst*/
+.burger-menu {
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  padding: 2.5%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(1px);
+}
+.burger-icon {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.burger-icon span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+.menu-content {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: transparent; /* Vollständig transparent */
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional leichter Schatten */
+  backdrop-filter: blur(10px); /* Unscharfer Hintergrund bleibt */
+  -webkit-backdrop-filter: blur(2px); /* Safari-Support */
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+.menu-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+.menu-content a:hover {
+  background-color: #57575737;
+}
+.burger-menu.open .menu-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  background: none;
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/
+    and (max-width:1032px) {
+  .menu-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  }
+  .burger-menu:hover .menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* phoneNumberSection *//* phoneNumberSection */
+/* phoneNumberSection *//* phoneNumberSection */
+
+.phone-contact {
+  position: fixed;
+  width: auto;
+  top: 1%;
+  right: 5%;
+  z-index: 1000;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif; 
+}
+.phone-contact a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.phone-icon {
+  font-size: 70%;
+  margin-right: 1vw;
+}
+.phone-number {
+  font-size: 100%;
+}
+.phone-contact:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
+  .phone-contact a {
+    font-size: 2vw;
+  } 
+}
+
+@media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
+  .phone-contact a {
+    font-size: 2vw;
+  }
+}
+
+/*ocean*//*ocean*/
+/*ocean*//*ocean*/
+
+/*MobileFirst*//*MobileFirst*/
+.ocean {
+  overflow: hidden;
+  position: relative;
+}
+body.simple-mode .ocean video {
+  display: none;
+  animation: kenburns 20s ease-in-out infinite;
+}
+.ocean video{
+  width: 100%;
+  height: auto;
+}
+.ocean-fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0)0%, #ffffff 90% , #ffffff 140%);
+  pointer-events: none; 
+}
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.2) translate(-5%, -5%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/ 
+    and (max-width:1032px) {
+  .ocean {
+   height: 50vw;
+  }
+}
+
+@media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
+  .ocean  {
+    height: 30vw;
+  }
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  .ocean {
+    width: 100%;
+    height: 40vw;
+  }
+}   
+
+/*NameOfPraxis*//*NameOfPraxis*/
+/*NameOfPraxis*//*NameOfPraxis*/
+
+/*MobileFirst*//*MobileFirst*/
+.praxis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 1.5rem;
+}
+.welcome {
+  margin-top: -80px;
+  color: rgb(64, 64, 65);
+  text-align: center;
+  filter: blur(8px);
+  opacity: 0;
+  transition: filter 3.5s ease, opacity 6.5s ease;
+  z-index: 0;
+  font-size: clamp(5vw, 4vw, 400%);
+} 
+.welcome p {
+   text-shadow: 0 0 5px rgba(255, 255, 255, 1),
+               0 0 10px rgba(255, 255, 255, 1),
+               0 0 20px rgba(0, 128, 255, 0.5),
+               0 0 40px rgba(0, 128, 255, 0.5);
+}
+.welcome.visible {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  .welcome p {
+    font-size: 3vw;
+  }
+  
+}
+
+/*introduction*//*introduction*/
+/*introduction*//*introduction*/
+
+/*MobileFirst*//*MobileFirst*/
+.starter {
+  display: grid;
+  width: 100%;
+  text-align: center; 
+}
+.intro {
+  width: 100%;
+}
+.logoPraxis {
+  display: block;
+  max-width: 200px;   
+  width: 30%;        
+  margin:  auto;  
+  height: auto;
+}
+.about {
+  text-align: center;
+  padding: 5%;
+  color: rgb(61, 104, 236);
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/
+    and (max-width:1032px) {
+      .intro {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 2rem;
+        justify-content: center;
+      }
+      .logoPraxis {
+        flex: 0 0 30%;
+        max-width: 30vw;   
+        margin: 0;
+        float: left;
+      }
+      .about {
+        flex: 1;
+        padding: 0;
+        width: 70%;
+        float: left;
+        text-align: left;
+      }
+    } 
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine)  {/*DesktopView*//*DesktopView*/
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .logoPraxis {
+    flex: 0 0 30%;
+    max-width: 15vw;   
+    margin: 3%;
+    float: left;
+  }
+  .about {
+    flex: 1;
+    padding: 0;
+    width: 70%;
+    float: left;
+    text-align: left;
+  } 
+}   
+@media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
+  .intro {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .logoPraxis {
+    flex: 0 0 30%;
+    max-width: 15vw;   
+    margin: 3%;
+    margin-top: 10%;
+    float: left;
+  }
+}
+
+/*AboutTheTherapist*//*AboutTheTherapist*/ 
+/*AboutTheTherapist*//*AboutTheTherapist*/ 
+
+/*MobileFirst*//*MobileFirst*/
+.therapistsBackground {
+  background-color: rgb(218, 228, 246);
+  padding: 5%; 
+  padding-top: 10%;
+  height: auto;
+  margin-left: 5%;
+  margin-right: 5%; 
+}
+.therapist {
+  width: 70%;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.therapist img {
+  width: 100%;
+  animation: kenburns 20s ease-in-out infinite;  
+}
+.aboutMe {
+  text-align: center; 
+}
+.leadingImage{
+  text-align: center; 
+}
+@media (min-width: 768px)/*IpadView*//*IpadView*/  
+    and (max-width:1032px) {
+  .therapistsBackground{ 
+    float: left;
+    height:85vw;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .therapist{
+    width: 40%;
+    float: left;
+    margin-right: 5%;
+  }
+  .aboutMe{
+    text-align: left;
+    width: 50%;
+    float: left; 
+  }
+  .leadingImage{
+    float: left;
+    text-align: left; 
+    margin-top: 2%;
+    padding: 2%;
+  }
+}  
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine)  {/*DesktopView*//*DesktopView*/
+  .therapistsBackground{ 
+    float: left;
+    height:auto;
+    width: 90%;
+    margin-left: 0%;
+    margin-right: 0%;  
+  }
+  .therapist{
+    width: 20%;
+    float: left;
+    margin: 2%;
+  }
+  .aboutMe{
+    text-align: left;
+    width: 70%;
+    float: left;  
+  }
+  .leadingImage{
+    float: left;
+    text-align: left; 
+    margin-top: 2%;
+    padding: 2%;
+  }
+} 
+
+@media (orientation: landscape)  {/*IpadLandscapeView*//*IpadLandscapeView*/
+  .therapistsBackground{ 
+    float: left;
+    height:auto; 
+  }
+  .therapist{
+    width: 20%;
+    float: left;
+    margin: 2%;  
+  }
+  .aboutMe{
+    text-align: left;
+    width: 70%;
+    float: left;     
+  }
+  .leadingImage{
+    float: left;
+    text-align: left; 
+    margin-top: 2%;
+    padding: 2%;   
+  }  
+} 
+
+/*ImagesOfPraxis*//*ImagesOfPraxis*/ 
+/*ImagesOfPraxis*//*ImagesOfPraxis*/
+
+/*MobileFirst*//*MobileFirst*/
+.slides-container {
+  display: block;
+  height: auto;              
+}
+.slideshow {
+  display: none;
+  position: relative;
+  width: 90%;
+  height: auto;              
+  aspect-ratio: 4 / 3;       
+  overflow: hidden;
+}
+.slideshow:first-child {
+  display: block;
+  margin-left: 5%;
+}
+.slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;              
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: kenburns 20s ease-in-out infinite alternate;  
+}
+.slideshow img.active { 
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/  
+    and (max-width:1032px) {
+      /*.slideshow {
+        
+      }*/
+      .slides-container{
+        height: 25vh;
+      }
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*/
+  .slides-container {
+    margin-bottom: 5%;
+    display: flex;
+    width: 100%;      
+    height: auto;       
+  }
+  .slideshow {
+    display: block;  
+    width: 40%;
+    height: auto;      
+  }
+  .slideshow:first-child {
+    margin-left: 0%;  
+  }
+}
+
+@media (orientation: landscape) {/*IpadLandscape*//*IpadLandscape*/
+  .slides-container {
+    display: flex;
+    width: 100%;
+    height: auto; 
+  }
+  .slideshow {
+    display: block;
+    width: 30%;
+    height: auto;
+  }
+}
+
+/*TreatmentsImage*//*TreatmentsImage*/
+/*TreatmentsImage*//*TreatmentsImage*/
+
+/*MobileFirst*//*MobileFirst*/
+.section {
+  width: 100%;
+  /* auf Mobile noch kein Flex-Layout */
+}
+
+.sectionsDiv {
+  width: 100%;
+  justify-content: center;
+}
+.treatments {
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.treatments img {
+  width: 40%;         
+  max-width: 300px;     
+  opacity: 0.58;
+  animation: kenburns 20s ease-in-out infinite;
+  margin-top: 5%;
+}
+.sections {
+  background-color: rgba(246, 195, 40, 0.301);
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
+}
+@media (min-width: 768px)/*IpadView*//*IpadView*/
+    and (max-width:1032px)
+    and (any-hover: none){
+  .treatments img { 
+    margin-top: 2%;      
+    max-width: 300px;    
+  }
+  .sections{ 
+    width: 80%;
+    float: left;
+  }
+  .sections p, h1, h2 {
+    margin: 0%;
+  }
+}
+
+@media (orientation: landscape) {
+  .treatments {
+    width: 100%;
+    margin-top: none;
+    padding-top: 10%;
+  }
+  /*.treatments img {
+    width: 100%;*/
+    /*max-width: 300px;   
+    /*margin-top: 8%;
+  }*/
+  .sectionsDiv {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .sections {
+    height: auto;
+    margin-bottom: 8.5%;
+    padding: 2%;
+  }  
+}
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  .section {
+    display: flex;
+    flex-wrap: nowrap;      
+    gap: 2rem;
+    align-items: stretch;   
+  }
+  .sectionsDiv {
+    flex: 1 1 50%;            
+    display: flex;
+    flex-direction: column;
+    background-color: #efaa0a53;
+    min-width: 0;
+  }
+  .sections {
+    flex: 0 0 auto;
+  }
+}
+
+/*VitaOfTherapist*//*VitaOfTherapist*/
+/*VitaOfTherapist*//*VitaOfTherapist*/
+
+/*MobileFirst*//*MobileFirst*/
+.therapistsBackground1 {
+  background-color: rgb(218, 228, 246);
+  padding: 5%;
+  height: auto;
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+body.simple-mode .therapistsBackground1 {
+  background-image: none !important;
+  background-color: white
+}
+.therapist1 {
+  width: 100%;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.therapist1 img {
+  width: 70%;
+  border-radius: 100%;
+  animation: kenburns 20s ease-in-out infinite; 
+  margin-bottom: 7%; 
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/
+    and (max-width:1032px)
+    and (any-hover: none) {
+  .vita{
+    margin-top: 2%;
+    text-align: left;
+    width: 50%;
+    float: left;
+  }
+  .therapist1{
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+  }
+  .therapist1 img {
+    width: 70%;
+    animation: kenburns 20s ease-in-out infinite;  
+  }
+}
+@media (orientation: landscape){/*IpadLandscapeView*//*IpadLandscapeView*/
+  
+  .therapist1{
+    float: none;
+    width: 100%;
+  }
+  .therapist1 img {
+    width: 50%;
+  }
+  .vita {
+    width: 100%; 
+  }
+  .vita1 {
+    width: 100%;  
+  }
+}
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
+  .therapistsBackground1 {
+    flex: 1 1 50%;   
+    min-width: 0;   
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .therapist1 {
+    width: 100%;
+  }
+  .therapist1 img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+  .vita,
+  .vita1 {
+    flex: 0 0 auto;
+  }
+}
+
+/*ContactSection*//*ContactSection*/
+/*ContactSection*//*ContactSection*/
+
+/*MobileFirst*//*MobileFirst*/
+.contactImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: auto;
+}
+.contactImage img {
+  width: 40vw;
+  opacity: 0.5
+  8;
+  animation: kenburns 20s ease-in-out infinite;
+  margin-top: 5%;
+  margin-bottom: 5%; 
+}
+.contactSection{
+  background-color: rgb(218, 228, 246);
+  width: 90%;
+  height: auto;
+  margin-bottom: 20%;
+  margin-left: 5%; 
+}
+.contact {
+  background-color: rgb(218, 228, 246);
+  width: 90%;
+  height: auto;
+  padding: 2%;
+}  
+.map {
+  margin: 3%;
+}
+@media (min-width: 768px)/*IpadView*//*IpadView*/ 
+    and (max-width:1032px) {
+  .contact img { 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 1000vw;   
+    }
+    .contactImage img {
+      width: 20%;
+    }
+    .contactSection {
+      height: 90vw;
+    }
+    .contact{
+      float: left;
+      width: 50%;
+    }
+    .map {
+      width: 40%;
+      float: left;
+    }
+  }    
+@media (orientation: landscape){/*IpadLandscapeView*//*IpadLandscapeView*/
+  .contactSection{
+    width: 100%;
+    margin-left: 0%;
+
+  }
+  .contactImage img {
+    width: 10%;
+  }
+}
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
+  .contactSection{
+    margin: 0%;
+    width: 100%;
+  }
+  .contactImage img {
+    width: 20%;
+  }
+}
+body.simple-mode .therapistsBackground,
+body.simple-mode .therapist,
+body.simple-mode .sections,
+body.simple-mode .contact {
+  background-color: #f0f0f0;
+}
+
+/*PrivacySection*//*PrivacySection*/
+/*PrivacySection*//*PrivacySection*/ 
+
+/*MobileFirst*//*MobileFirst*/
+.impressum {
+  background-color: rgb(218, 228, 246);
+  padding: 10%;
+  line-height: 1.6;
+}
+.impressum a {
+  color: #3366cc;
+  text-decoration: none;
+}
+.impressum a:hover {
+  text-decoration: underline;
+}

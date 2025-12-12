@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psychotherapie Steinhäuser</title>
+  <link rel="stylesheet" href="steinhaeuser.css">
+  <script src="steinhaeuser.js"defer></script>
+</head>
+<body>  
+  <!-- Telefonkontakt --><!-- Telefonkontakt -->
+  <div class="phone-contact">
+    <a href="tel:+4915123456789" aria-label="Telefonnummer anrufen">
+      <span class="phone-icon">📞</span>
+      <span class="phone-number">03634 316761</span>
+    </a>
+  </div>
+
+  <!-- Burger-Menü --><!-- Burger-Menü -->
+  <div class="burger-menu">
+    <div class="burger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-content">
+      <a href="#">Home</a>
+      <a href="#">Produkte</a>
+      <a href="#">Über uns</a>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </div>
+  
+  <!-- Prevacy-Popup --><!-- Prevacy-Popup -->
+  <div id="datenschutz-popup" class="popup-overlay">
+    <div class="popup-content">
+      <h2>Datenschutzhinweis</h2>
+      <p>Diese Webseite speichert keine personenbezogenen Daten ohne Ihre Zustimmung. Wir verwenden keine Cookies zu Analyse- oder Marketingzwecken. Durch die Nutzung dieser Seite erklären Sie sich mit unseren <a href="/datenschutz.html" target="_blank">Datenschutzbestimmungen</a> einverstanden.</p>
+      <button id="popUpOkBtn">Verstanden</button>
+    </div>
+  </div>
+
+  <!-- Acessbility-Widget --><!-- Acessbility-Widget -->
+  <div class="accessibility-widget">
+    <button id="accessibility-btn" aria-label="Informationen zur Barrierefreiheit">
+      ♿ Barrierefreiheit
+    </button>
+
+    <div id="accessibility-menu" class="accessibility-menu">
+      <button id="background-toggle"> Nur Text</button>
+      <button id="increase-font">Größere Schrift</button>
+      <button id="decrease-font">Kleinere Schrift</button>
+    </div> 
+  </div>
+
+  <!-- ocean --><!-- ocean -->   
+  <div class="ocean">
+    <video  width="110%" autoplay muted loop playsinline>
+    <source src="images/sea.mp4" type="video/mp4">
+    Dein Browser unterstützt dieses Video nicht.
+    </video>
+    <div class="ocean-fadeout"></div>
+  </div> 
+
+  <!-- Name of Praxis --><!-- Name of Praxis -->
+  <div class="praxis">
+    
+    <div class="welcome">
+        <p> Praxis Gabriele Steinhäuser Kinder- und Jugendlichenpsychotherapeutin</p>
+    </div>
+    
+    
+    
+     
+  </div>
+  <!-- About Section --><!-- About Section -->
+  <div class="starter">
+    <div class="intro">
+      <img class="logoPraxis"  src="/images/logoPraxis.png" alt="" >
+      <div class="about">
+        
+          <h2>Einleitung </h2>
+          <p> „Herzlich willkommen auf der Internetseite meiner Praxis für Psychotherapie. 
+              Auf diesen Seiten erhalten Sie einen Überblick über mein therapeutisches 
+              Angebot und die Behandlungsschwerpunkte. Zudem erfahren Sie Wissenswertes 
+              über meine Qualifikationen und meinen beruflichen Hintergrund. Wenn Sie 
+              Interesse an einem persönlichen Gespräch haben, finden Sie hier auch alle 
+              notwendigen Informationen zur Kontaktaufnahme.“</p>
+      </div>
+    </div>
+    <div class="therapistsBackground">
+      <div class="therapist">
+          <img src="images/therapist.png" alt="" >
+      </div>
+      <div class="aboutMe">
+        <h2>Gabriele Steinhäuser</h2>
+        <p>Kinder- und Jugendlichenpsychotherapeutin (tiefenpsychologisch fundiert)
+        <br>
+        <br>
+          Systemische Therapeutin (SG)
+        <br>
+        <br>
+          Therapeutin für Psychotraumatologie und traumazentrierte Psychotherapie (ZPTN)
+          <br>
+          <br>
+        </div>     
+      <div class="leadingImage">   
+          <h2>Leitbild meiner Arbeit</h2>
+          <p>Als tiefenpsychologisch fundiert arbeitende Therapeutin sehe ich seelische 
+            Schwierigkeiten als Ausdruck ungelöster innerer oder zwischenmenschlicher 
+            Konflikte, die ihre Wurzeln in der Vergangenheit oder in der Gegenwart haben können. 
+            Als systemische Therapeutin gehe ich davon aus, dass im Symptom kreative Lösungsansätze 
+            verborgen sein können und jeder Mensch über innere Stärke, Fähigkeiten und Begabungen 
+            verfügt (und weiterentwickeln kann), um mit solchen Belastungen umzugehen.
+            <br>
+            <br>
+            In der traumazentrierten Psychotherapie verknüpfe ich beide Ansätze und ergänze 
+            sie durch spezielle Verfahren.
+        </p>
+      </div>  
+    </div> 
+  </div>
+  <!-- PicturesOfPraxis --><!-- PicturesOfPraxis -->
+
+  <!--<div class="slideshow">slideshow
+    <img src="images/praxis1.jpeg" class="active" alt="Bild 1">
+    <img src="images/praxis2.jpeg" alt="Bild 2">
+    <img src="images/praxis3.jpeg" alt="Bild 3">
+    <img src="images/praxis4.jpeg" alt="Bild 4">
+    <img src="images/praxis5.jpeg" alt="Bild 5">
+    <img src="images/praxis6.jpeg" alt="Bild 6">
+    <img src="images/praxis7.jpeg" alt="Bild 7">
+  </div>-->
+  <div class="slides-container">
+    <!-- Slideshow 1 (Startbild = 1) -->
+    <div class="slideshow" data-start="0">
+      <img src="images/praxis1.jpeg" class="active">
+      <img src="images/praxis2.jpeg">
+      <img src="images/praxis3.jpeg">
+      <img src="images/praxis4.jpeg">
+      <img src="images/praxis5.jpeg">
+      <img src="images/praxis6.jpeg">
+      <img src="images/praxis7.jpeg">
+    </div>
+
+      <!-- Slideshow 2 (Startbild = 7) -->
+    <div class="slideshow" data-start="6">
+      <img src="images/praxis1.jpeg">
+      <img src="images/praxis2.jpeg">
+      <img src="images/praxis3.jpeg">
+      <img src="images/praxis4.jpeg">
+      <img src="images/praxis5.jpeg">
+      <img src="images/praxis6.jpeg">
+      <img src="images/praxis7.jpeg" class="active">
+    </div>
+    
+      <!-- Slideshow 3 (Startbild = 6) -->
+    <div class="slideshow" data-start="5">
+      <img src="images/praxis1.jpeg">
+      <img src="images/praxis2.jpeg">
+      <img src="images/praxis3.jpeg">
+      <img src="images/praxis4.jpeg">
+      <img src="images/praxis5.jpeg">
+      <img src="images/praxis6.jpeg" class="active">
+      <img src="images/praxis7.jpeg">
+    </div>
+  </div>
+  <!-- TreatmentsPraxis --><!-- TreatmentsPraxis --> 
+  <div class="section">
+    <div class="sectionsDiv">
+      <div class="treatments">
+        <img src="images/treatments.png" alt="">
+      </div>
+
+      <div class="sections">
+        <h2>psychodynamische Einzeltherapie</h2>
+        <p>Konventionelle, auf die jeweiligen Fähigkeiten und Bedürfnisse von Kindern 
+          und Jugendlichen angepasste psychodynamische Einzeltherapie im Einzelsetting 
+          und dazugehörige Begleitpersonenstunden
+        </p>
+      </div>
+
+      <div class="sections">
+        <h2>imaginative Therapieformen</h2>
+        <p>imaginative Therapieformen insbesondere zur Stabilisierung</p>
+      </div>
+
+      <div class="sections">
+        <h2>Ego-State-Therapie</h2>
+        <p>Arbeit auf der inneren Bühne insbesondere für Patienten mit 
+          ausgeprägter dissoziativer Symptomatik angelehnt an J.G. Watkins und J. Peichl</p>
+      </div>
+
+      <div class="sections">
+        <h2>Traumakonfrontation</h2>
+        <p>Methoden der Traumakonfrontation (z. B. Screentechnik, 
+          Traumaerzählgeschichte in Verbindung mit EMDR, Vierfeldertechnik)
+        </p>
+      </div>
+    </div>
+    <!--TherapistBackground--><!--TherapistBackground-->  
+    <div class="therapistsBackground1">
+        <div class="therapist1">
+          <img src="images/Gabi2.png" alt="" >
+        </div>
+        
+        <div class="vita">
+          <h2>    
+            Für die therapeutische Grundhaltung ist mir wichtig:
+          </h2>
+          <p>
+            - Transparenz in der gemeinsamen Arbeit
+          <br>
+          <br>
+            - verständliche, anschaulicher Erklärungen (Psychoedukation)
+          <br>
+          <br>
+            - die Reflexion der therapeutischen Beziehung vor dem 
+              Hintergrund der Beziehungserfahrung des Patienten (Übertragungsgeschehen)
+          <br>
+          <br>
+            - Beispiele: anschauliche Biographiearbeit; Arbeit auf der inneren Bühne (Bilder)  
+            
+            
+            Verknüpfung verschiedener Therapieansätze  
+          </p>
+        </div>
+        <div class="vita1">
+          <h2>Beruflicher Werdegang:</h2>
+          <p>
+            1977 Abitur
+          <br>
+          <br>
+            1981 Diplom an der Pädagogischen Hochschule Erfurt/Mühlhausen; 
+          <br>
+          <br>
+            bis 2004 Arbeit in unterschiedlichen pädagogischen Kontexten mit Kindern und Erwachsenen
+          <br>
+          <br>
+            2003 Abschluss als Systemische Therapeutin (SG)
+          <br>
+          <br>
+            2005 Abschluss als Kinder- und Jugendlichenpsychotherapeutin (tiefenpsychologisch fundiert) 
+            an der Akademie für Psychotherapie Erfurt
+          <br>
+          <br>
+            2005 Approbation und Kassenzulassung
+          <br>
+          <br>
+            2006 Niederlassung
+          <br>
+          <br>
+            2015 Abschluss als Therapeutin für Psychotraumatologie und traumazentrierte 
+            Psychotherapie am ZPTN Niedersachsen 
+          </p>
+          
+        </div>    
+        
+    </div>
+  </div>
+
+
+
+  <div class="contactImage">
+    <img src="images/contactImg.png" alt="">
+  </div> 
+  <div class="contactSection">
+    <div class="contact">
+
+      <h2>Kontakt:</h2>
+      <p>Praxis Gabriele Steinhäuser Kinder- und Jugendlichenpsychotherapeutin
+        
+        <br>
+        <br>
+        Tel.: 03634 316761
+        <br>
+        Schillerstr. 25 a
+        <br> 
+        99610 Sömmerda
+        <br>
+        <br>
+        info@deineemailadresse.de
+
+        <h2>Sprechzeiten:</h2>
+        <p>Montag 14 -19 Uhr
+          <br>
+          
+          Dienstag 14-19 Uhr
+          <br>
+          Mittwoch 14-17 Uhr und bei Bedarf nach Absprache</p>
+        
+
+        </p>
+        <h2>Telefonische Sprechzeiten:</h2>
+        <p>Montag 13.15 Uhr bis 14 Uhr 
+        <br>
+          Dienstag 13 bis 14 Uhr unter 016099487828
+        <br>
+          Montag bis Mittwoch ab 14 Uhr unter 03634/316761 jeweils 10  
+        
+          Minuten vor der vollen Stunde oder Nachricht auf dem AB  </p>
+         
+    </div>
+    <div class="map">
+      <img src="images/Karte.png" alt="Lageplan Praxis" style="max-width:100%; height:auto;">
+        <p style="font-size: 0.8em; color: #555;">
+        Karte: © OpenStreetMap-Mitwirkende
+        </p>  
+    </div>
+  </div>
+</body>
+</html>
