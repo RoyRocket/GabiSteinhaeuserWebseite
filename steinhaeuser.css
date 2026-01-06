@@ -258,6 +258,23 @@ body.simple-mode .about {
     transform: translateY(0);
   }
 }
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
+  .burger-menu:hover .menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
+  .burger-menu:hover .menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .menu-content a{
+    font-size: 1.5vw;
+    
+  }
+}
 
 /* phoneNumberSection *//* phoneNumberSection */
 /* phoneNumberSection *//* phoneNumberSection */
