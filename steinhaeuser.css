@@ -416,7 +416,7 @@ body.simple-mode .ocean video {
 .logoPraxis {
   display: block;
   max-width: 200px;   
-  width: 30%;        
+  width: 50%;        
   margin:  auto;  
   height: auto;
 }
@@ -460,8 +460,8 @@ body.simple-mode .ocean video {
   }
   .logoPraxis {
     flex: 0 0 30%;
-    max-width: 15vw;   
-    margin: 3%;
+    max-width:20vw;   
+    margin-bottom: 6%;
     float: left;
   }
   .about {
@@ -500,6 +500,7 @@ body.simple-mode .ocean video {
   height: auto;
   margin-left: 5%;
   margin-right: 5%; 
+  margin-bottom: 2%;
 }
 .therapist {
   width: 70%;
@@ -593,80 +594,7 @@ body.simple-mode .ocean video {
   }  
 } 
 
-/*ImagesOfPraxis*//*ImagesOfPraxis*/ 
-/*ImagesOfPraxis*//*ImagesOfPraxis*/
 
-/*MobileFirst*//*MobileFirst*/
-.slides-container {
-  display: block;
-  height: auto;              
-}
-.slideshow {
-  display: none;
-  position: relative;
-  width: 90%;
-  height: auto;              
-  aspect-ratio: 4 / 3;       
-  overflow: hidden;
-}
-.slideshow:first-child {
-  display: block;
-  margin-left: 5%;
-}
-.slideshow img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: auto;              
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-  animation: kenburns 20s ease-in-out infinite alternate;  
-}
-.slideshow img.active { 
-  opacity: 1;
-  z-index: 1;
-}
-
-@media (min-width: 768px)/*IpadView*//*IpadView*/  
-    and (max-width:1032px) {
-      /*.slideshow {
-        
-      }*/
-      .slides-container{
-        height: 25vh;
-      }
-}
-
-@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*/
-  .slides-container {
-    margin-bottom: 5%;
-    display: flex;
-    width: 100%;      
-    height: auto;       
-  }
-  .slideshow {
-    display: block;  
-    width: 40%;
-    height: auto;      
-  }
-  .slideshow:first-child {
-    margin-left: 0%;  
-  }
-}
-
-@media (orientation: landscape) {/*IpadLandscape*//*IpadLandscape*/
-  .slides-container {
-    display: flex;
-    width: 100%;
-    height: auto; 
-  }
-  .slideshow {
-    display: block;
-    width: 30%;
-    height: auto;
-  }
-}
 
 /*TreatmentsImage*//*TreatmentsImage*/
 /*TreatmentsImage*//*TreatmentsImage*/
@@ -689,14 +617,15 @@ body.simple-mode .ocean video {
   overflow: hidden;
 }
 .treatments img {
-  width: 40%;         
+  width: 90%;         
   max-width: 300px;     
   opacity: 0.58;
   animation: kenburns 20s ease-in-out infinite;
   margin-top: 5%;
 }
 .sections {
-  background-color: rgba(246, 195, 40, 0.301);
+  /*background-color: rgba(246, 195, 40, 0.301);*/
+ 
   width: 80%;
   height: auto;
   text-align: center;
@@ -847,6 +776,81 @@ body.simple-mode .therapistsBackground1 {
   .vita,
   .vita1 {
     flex: 0 0 auto;
+  }
+}
+/*ImagesOfPraxis*//*ImagesOfPraxis*/ 
+/*ImagesOfPraxis*//*ImagesOfPraxis*/
+
+/*MobileFirst*//*MobileFirst*/
+.slides-container {
+  display: block;
+  height: auto;              
+}
+.slideshow {
+  display: none;
+  position: relative;
+  width: 90%;
+  height: auto;              
+  aspect-ratio: 4 / 3;       
+  overflow: hidden;
+  border-radius: 5%;
+}
+.slideshow:first-child {
+  display: block;
+  margin-left: 5%;
+}
+.slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;              
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  animation: kenburns 20s ease-in-out infinite alternate;  
+}
+.slideshow img.active { 
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (min-width: 768px)/*IpadView*//*IpadView*/  
+    and (max-width:1032px) {
+      /*.slideshow {
+        
+      }*/
+      .slides-container{
+        height: 25vh;
+      }
+}
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*/
+  .slides-container {
+    margin-bottom: 5%;
+    display: flex;
+    width: 100%;      
+    height: auto;       
+  }
+  .slideshow {
+    display: block;  
+    width: 100%;
+    height: auto;      
+  }
+  .slideshow:first-child {
+    margin-left: 0%;  
+  }
+}
+
+@media (orientation: landscape) {/*IpadLandscape*//*IpadLandscape*/
+  .slides-container {
+    display: flex;
+    width: 100%;
+    height: auto; 
+  }
+  .slideshow {
+    display: block;
+    width: 30%;
+    height: auto;
   }
 }
 
