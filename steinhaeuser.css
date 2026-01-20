@@ -1,21 +1,28 @@
 /* steinhaeuser.css by Robert Eric Elendt © */
 
 /*MobileFirst*//*MobileFirst*/
+:root { --fontScale: 1; }
+
+html {
+  font-size: calc(100% * var(--fontScale)); /* 100% = Browser-Default (meist 16px) */
+ 
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  
   background: white;
   transform-origin: top left;
-  font-size: 3.5vw;  
+  font-size: 1rem; /* statt 3.5vw */
 }
+
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/ 
     and (max-width:1032px) {
       body p {
-        font-size: 2.5vw;
+        font-size: 1rem;
       }
       body h2 {
-        font-size: 3vw;
+        font-size: 1.25rem;
       }
 }
 
@@ -25,10 +32,10 @@ body {
     margin-right: 5vw;
   }
   body p {
-    font-size: 1.5vw;
+    font-size: 1rem;
   }
   body h2 {
-    font-size: 1.5vw;
+    font-size: 1.25rem;
   }
   .burger-menu {
     margin-left: 5vw;
@@ -40,13 +47,14 @@ body {
   .accessibility-widget {
     margin-right: 6%;
   }
+  
 }
 @media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
   body p {
-    font-size: 2vw;
+    font-size: 1rem;
   }
   body h2 {
-    font-size: 2.5vw;
+    font-size: 1rem;
   }
 }
 
@@ -151,6 +159,11 @@ body {
   cursor: pointer;
   text-align: left;
 }
+#accessibility-reset {
+  margin-top: 6px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  padding-top: 10px;
+}
 .accessibility-menu button:hover {
    backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(2px); 
@@ -165,9 +178,13 @@ body.simple-mode {
 }
 body.simple-mode * {
   background-image: none !important;
+  background: none;
+
 }
 body.simple-mode .welcome,
-body.simple-mode .about { 
+body.simple-mode .about
+body.simple-mode .section
+body.simple-mode .sectionDiv { 
   color: black;
   background: none;
   transform: none;
@@ -177,7 +194,7 @@ body.simple-mode .about {
 
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .accessibility-widget {
-    font-size: 1.5vw;
+    font-size: 2rem;
   }
 } 
 .impressum-btn {
@@ -188,7 +205,7 @@ body.simple-mode .about {
   flex-direction: column;
   align-items: flex-end; 
   z-index: 200; 
-  font-size: 1.5vw;
+ 
   
 }
 .impressum-btn a {
@@ -215,11 +232,12 @@ body.simple-mode .about {
 .burger-menu {
   width: 100%;
   position: fixed;
-  left: 0%;
+  left: 5%;
   padding: 2.5%;
   z-index: 100;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(1px);
+  
 }
 .burger-icon {
   width: 30px;
@@ -228,6 +246,7 @@ body.simple-mode .about {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  
 }
 .burger-icon span {
   display: block;
@@ -299,7 +318,7 @@ body.simple-mode .about {
     transform: translateY(0);
   }
   .menu-content a{
-    font-size: 1.5vw;
+    font-size: 1rem;
     
   }
 }
@@ -311,7 +330,7 @@ body.simple-mode .about {
   position: fixed;
   width: auto;
   top: 1%;
-  right: 5%;
+  right: 8%;
   z-index: 1000;
   background: transparent;
   padding: 8px 12px;
@@ -333,7 +352,7 @@ body.simple-mode .about {
   margin-right: 1vw;
 }
 .phone-number {
-  font-size: 100%;
+  font-size: 1rem;
 }
 .phone-contact:hover {
   cursor: pointer;
@@ -341,13 +360,13 @@ body.simple-mode .about {
 
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
   .phone-contact a {
-    font-size: 2vw;
+    font-size: 1.5rem;
   } 
 }
 
 @media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
   .phone-contact a {
-    font-size: 2vw;
+    font-size: 1.5rem;
   }
 }
 
@@ -420,6 +439,8 @@ body.simple-mode .ocean video {
 }
 .welcome {
   margin-top: -80px;
+ 
+
   color: rgb(64, 64, 65);
   text-align: center;
   filter: blur(8px);
@@ -441,7 +462,7 @@ body.simple-mode .ocean video {
 
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .welcome p {
-    font-size: 3vw;
+    font-size: 2rem;
   }
   
 }
@@ -647,12 +668,16 @@ body.simple-mode .ocean video {
 /*MobileFirst*//*MobileFirst*/
 .section {
   width: 100%;
+  
   /* auf Mobile noch kein Flex-Layout */
 }
 
 .sectionsDiv {
   width: 100%;
   justify-content: center;
+  background-color: #efaa0a53;
+  
+  
 }
 .treatments {
   
@@ -669,7 +694,7 @@ body.simple-mode .ocean video {
   margin-top: 5%;
 }
 .sections {
-  /*background-color: rgba(246, 195, 40, 0.301);*/
+  
  
   width: 80%;
   height: auto;
@@ -721,13 +746,14 @@ body.simple-mode .ocean video {
     display: flex;
     flex-wrap: nowrap;      
     gap: 2rem;
-    align-items: stretch;   
+    align-items: stretch;  
+     
   }
   .sectionsDiv {
     flex: 1 1 50%;            
     display: flex;
     flex-direction: column;
-    background-color: #efaa0a53;
+    
     min-width: 0;
   }
   .sections {
@@ -990,6 +1016,7 @@ body.simple-mode .contact {
   background-color: rgb(218, 228, 246);
   padding: 10%;
   line-height: 1.6;
+  width: 80%;
 }
 .impressum a {
   color: #3366cc;
