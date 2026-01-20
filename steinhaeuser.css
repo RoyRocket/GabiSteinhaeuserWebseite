@@ -112,7 +112,7 @@ body {
 .accessibility-widget {
   position: fixed;
   bottom: 1%;
-  right: 1%;
+  right: 7%;
   display: flex;
   flex-direction: column;
   align-items: flex-end; 
@@ -564,8 +564,7 @@ body.simple-mode .ocean video {
   padding: 5%; 
   padding-top: 10%;
   height: auto;
-  margin-left: 5%;
-  margin-right: 5%; 
+   
   margin-bottom: 2%;
 }
 .therapist {
@@ -770,8 +769,7 @@ body.simple-mode .ocean video {
   padding: 5%;
   height: auto;
   margin: 0;
-  margin-left: 5%;
-  margin-right: 5%;
+  
 }
 body.simple-mode .therapistsBackground1 {
   background-image: none !important;
