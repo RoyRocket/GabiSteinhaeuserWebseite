@@ -230,7 +230,7 @@ body.simple-mode .sectionDiv {
 
 /*MobileFirst*//*MobileFirst*/
 .burger-menu {
-
+  
   width: 100%;
   position: fixed;
   left: 5%;
@@ -241,6 +241,7 @@ body.simple-mode .sectionDiv {
   
 }
 .burger-icon {
+  
   width: 30px;
   height: 22px;
   display: flex;
@@ -256,6 +257,7 @@ body.simple-mode .sectionDiv {
   background-color: #333;
   border-radius: 2px;
   transition: background 0.3s;
+  
 }
 .menu-content {
   position: absolute;
@@ -267,7 +269,7 @@ body.simple-mode .sectionDiv {
   min-width: 150px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional leichter Schatten */
   backdrop-filter: blur(10px); /* Unscharfer Hintergrund bleibt */
-  -webkit-backdrop-filter: blur(2px); /* Safari-Support */
+  -webkit-backdrop-filter: blur(10px); /* Safari-Support */
   z-index: 10;
   opacity: 0;
   visibility: hidden;
