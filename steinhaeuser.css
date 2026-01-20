@@ -5,7 +5,7 @@
 
 html {
   font-size: calc(100% * var(--fontScale)); /* 100% = Browser-Default (meist 16px) */
- 
+  scroll-behavior: smooth;
 }
 
 body {
@@ -230,6 +230,7 @@ body.simple-mode .sectionDiv {
 
 /*MobileFirst*//*MobileFirst*/
 .burger-menu {
+
   width: 100%;
   position: fixed;
   left: 5%;
@@ -374,6 +375,10 @@ body.simple-mode .sectionDiv {
 /*ocean*//*ocean*/
 
 /*MobileFirst*//*MobileFirst*/
+#home {
+  scroll-margin-top: 150px;
+
+}
 .ocean {
   overflow: hidden;
   position: relative;
@@ -692,6 +697,9 @@ body.simple-mode .ocean video {
   animation: kenburns 20s ease-in-out infinite;
   margin-top: 5%;
 }
+#treatment {
+  scroll-margin-top: 400px; /* Höhe deines fixen Headers anpassen */
+}
 .sections {
   
  
@@ -764,6 +772,9 @@ body.simple-mode .ocean video {
 /*VitaOfTherapist*//*VitaOfTherapist*/
 
 /*MobileFirst*//*MobileFirst*/
+#aboutMe{
+  scroll-margin-top: 400px;
+}
 .therapistsBackground1 {
   background-color: rgb(218, 228, 246);
   padding: 5%;
@@ -927,6 +938,10 @@ body.simple-mode .therapistsBackground1 {
 /*ContactSection*//*ContactSection*/
 
 /*MobileFirst*//*MobileFirst*/
+#contact {
+  scroll-margin-top: 250px;
+ 
+}
 .contactImage {
   width: 100%;
   display: flex;
