@@ -549,16 +549,12 @@ body.simple-mode .ocean video {
     text-align: left;
   }
 
- 
   .logoBox{
     flex: 0 0 1px;       
     display: flex;
-    align-items: center; 
-      
-    
+    align-items: center;  
   }
 
- 
   .logoPraxis{
     height: 100%;
     width: auto;
@@ -603,16 +599,19 @@ body.simple-mode .ocean video {
   margin-bottom: 2%;
 }
 .therapist {
-  width: 70%;
-  border-radius: 100%;
+  width: 90%;           /* oder %, max-width etc. */
+  aspect-ratio: 1 / 1;   /* 🔒 macht immer ein Quadrat */
+  border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .therapist img {
   width: 100%;
-  animation: kenburns 20s ease-in-out infinite;  
+  height: 100%;
+  object-fit: cover;     /* füllt den Kreis sauber */
+  animation: kenburns 20s ease-in-out infinite; 
 }
 .aboutMe {
   text-align: center; 
@@ -652,15 +651,15 @@ body.simple-mode .ocean video {
     background-color: rgb(218, 228, 246);
     padding: 5%;
     gap: 2rem;
+   }
   
-  }
   
   /* links: Kreis */
   .therapist{
     flex: 0 0 20%;
     max-width: 300px;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    border-radius: 100%;
     overflow: hidden;
   }
   
@@ -669,8 +668,9 @@ body.simple-mode .ocean video {
     height: 100%;
     object-fit: cover;
     display: block;
+    animation: kenburns 20s ease-in-out infinite; 
   }
-  
+}
   /* rechts: Text neben Kreis */
   .aboutMe{
     flex: 1 1 0;              /* ✅ nimmt restliche Breite */
@@ -680,13 +680,11 @@ body.simple-mode .ocean video {
   
   /* darunter: volle Breite */
   .leadingImage{
-    flex: 0 0 100%;           /* ✅ immer neue Zeile, volle Breite */
+    flex: 0 0 100%;
     width: 100%;
-    margin-top: 1rem;
-    /* ❌ float raus */
   }
   
-@media (orientation: landscape)  {/*IpadLandscapeView*//*IpadLandscapeView*/
+  /*@media (min-width: 768px) and (max-width: 1032px) and (orientation: landscape)  {/*IpadLandscapeView*//*IpadLandscapeView*/
   /*.therapistsBackground{ 
     float: left;
     height:auto; 
@@ -706,8 +704,8 @@ body.simple-mode .ocean video {
     text-align: left; 
     margin-top: 2%;
     padding: 2%;   
-  } */ 
-} 
+  } 
+} */ 
 
 
 
@@ -862,10 +860,10 @@ body.simple-mode .therapistsBackground1 {
   }
   .therapist1 img {
     width: 70%;
-    animation: kenburns 20s ease-in-out infinite;  
+     
   }
 }
-@media (orientation: landscape){/*IpadLandscapeView*//*IpadLandscapeView*/
+@media (min-width: 768px) and (max-width: 1032px) and (orientation: landscape){/*IpadLandscapeView*//*IpadLandscapeView*/
   
   .therapist1{
     float: none;
@@ -883,13 +881,14 @@ body.simple-mode .therapistsBackground1 {
 }
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
   .therapistsBackground1 {
-    flex: 1 1 50%;   
+    flex: 1 40%;   
     min-width: 0;   
     display: flex;
     flex-direction: column;
     margin-left: 0%;
     margin-right: 0%;
   }
+  
   .therapist1 {
     width: 100%;
   }
@@ -948,36 +947,46 @@ body.simple-mode .therapistsBackground1 {
         height: 25vh;
       }
 }
-
+   /*@media (min-width: 768px) and (max-width: 1032px) and (orientation: landscape) {
+  .slides-container{ display: flex; }
+  .slideshow{ width: 30%; }
+}*/
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*/
-  .slides-container {
-    margin-bottom: 5%;
-    display: flex;
-    width: 100%;      
-    height: auto;       
-  }
-  .slideshow {
-    display: block;  
+  .slides-container{
+    display: block;        /* statt flex */
     width: 100%;
-    height: auto;      
+    margin-bottom: 1%;
+   
   }
+  
+  .slideshow{
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* erzeugt echte Höhe */
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .slideshow img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+              /* wichtig: nicht auto */
+    object-fit: cover;
+  }
+  
+  
+  
+  
+ 
   .slideshow:first-child {
     margin-left: 0%;  
   }
 }
 
-@media (orientation: landscape) {/*IpadLandscape*//*IpadLandscape*/
-  .slides-container {
-    display: flex;
-    width: 100%;
-    height: auto; 
-  }
-  .slideshow {
-    display: block;
-    width: 30%;
-    height: auto;
-  }
-}
+
 
 /*ContactSection*//*ContactSection*/
 /*ContactSection*//*ContactSection*/
@@ -1082,5 +1091,4 @@ body.simple-mode .contact {
 }
 .impressum a:hover {
   text-decoration: underline;
-}
 }
