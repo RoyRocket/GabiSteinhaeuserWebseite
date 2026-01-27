@@ -592,20 +592,21 @@ body.simple-mode .ocean video {
 /*MobileFirst*//*MobileFirst*/
 .therapistsBackground {
   background-color: rgb(218, 228, 246);
-  padding: 5%; 
   padding-top: 10%;
-  height: auto;
+  height: auto; 
+ 
    
   margin-bottom: 2%;
 }
 .therapist {
-  width: 90%;           /* oder %, max-width etc. */
+  width: 50%;           /* oder %, max-width etc. */
   aspect-ratio: 1 / 1;   /* 🔒 macht immer ein Quadrat */
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .therapist img {
   width: 100%;
@@ -841,7 +842,8 @@ body.simple-mode .therapistsBackground1 {
   width: 70%;
   border-radius: 100%;
   animation: kenburns 20s ease-in-out infinite; 
-  margin-bottom: 7%; 
+  margin-bottom: 7%;
+  margin: 0 auto; 
 }
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/
