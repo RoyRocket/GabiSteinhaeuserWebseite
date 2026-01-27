@@ -1,0 +1,33 @@
+@media (min-width: 574px) {
+
+    .intro{
+      display: flex;
+      align-items: stretch;   /* beide Spalten gleiche Höhe */
+      gap: 2rem;
+      width: 100%;
+      text-align: left;
+    }
+  
+    /* linke Spalte bekommt die Höhe von about */
+    .logoBox{
+      flex: 0 0 260px;        /* Spaltenbreite links */
+      display: flex;
+      align-items: center;    /* Logo vertikal mittig */
+      justify-content: center;
+    }
+  
+    /* Logo bleibt gleich groß */
+    .logoPraxis{
+        height: 100%;
+        width: auto;
+        max-width: 200px;   /* begrenzen */
+        object-fit: contain;
+      }
+  
+    .about{
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0;
+      overflow-wrap: anywhere;
+    }
+  }

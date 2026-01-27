@@ -13,6 +13,10 @@ body {
   background: white;
   transform-origin: top left;
   font-size: 1rem; /* statt 3.5vw */
+  max-width: 1000px;   /* hier stellst du die Grenze ein */
+  margin: 0 auto;      /* zentriert */
+  width: 100%;
+  padding: 0 16px; 
 }
 
 
@@ -47,6 +51,7 @@ body {
   .accessibility-widget {
     margin-right: 6%;
   }
+
   
 }
 @media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
@@ -77,9 +82,9 @@ body {
 }
 
 .popup-content {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(0.1px);
+  -webkit-backdrop-filter: blur(0.1px);
   padding: clamp(20px, 3vw, 40px);
   border-radius: 12px;
   width: 70%;
@@ -95,6 +100,10 @@ body {
   padding: 5%;
   margin: 0 auto;
   width: 50%;
+  
+
+  
+  
 }
 @media (min-width: 768px)/*IpadView*//*IpadView*/ 
     and (max-width:1032px) {
@@ -102,7 +111,13 @@ body {
 }
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/ 
   #popUpOkBtn {
-    padding: 1%;
+    padding: 1%;  
+    font-size: 20px;
+  }
+  .popup-content{
+    width:50%
+    
+    
   }
 }
 
@@ -195,6 +210,7 @@ body.simple-mode .sectionDiv {
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .accessibility-widget {
     font-size: 2rem;
+ 
   }
 } 
 .impressum-btn {
@@ -488,7 +504,7 @@ body.simple-mode .ocean video {
 }
 .logoPraxis {
   display: block;
-  max-width: 200px;   
+  /*max-width: 200px;*/   
   width: 50%;        
   margin:  auto;  
   height: auto;
@@ -497,6 +513,7 @@ body.simple-mode .ocean video {
   text-align: center;
   padding: 5%;
   color: rgb(61, 104, 236);
+ 
 }
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/
@@ -509,8 +526,8 @@ body.simple-mode .ocean video {
         justify-content: center;
       }
       .logoPraxis {
-        flex: 0 0 30%;
-        max-width: 30vw;   
+        /*flex: 0 0 30%;*/
+        /*max-width: 30vw;*/   
         margin: 0;
         float: left;
       }
@@ -524,27 +541,38 @@ body.simple-mode .ocean video {
     } 
 
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine)  {/*DesktopView*//*DesktopView*/
-  .intro {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
+  .intro{
+    display: flex;
+    align-items: stretch;   
     gap: 2rem;
-    justify-content: center;
-  }
-  .logoPraxis {
-    flex: 0 0 30%;
-    max-width:20vw;   
-    margin-bottom: 6%;
-    float: left;
-  }
-  .about {
-    flex: 1;
-    padding: 0;
-    width: 70%;
-    float: left;
+    width: 100%;
     text-align: left;
-  } 
-}   
+  }
+
+ 
+  .logoBox{
+    flex: 0 0 1px;       
+    display: flex;
+    align-items: center; 
+      
+    
+  }
+
+ 
+  .logoPraxis{
+    height: 100%;
+    width: auto;
+    max-width: 150px;  
+    object-fit: contain;
+  }
+
+  .about{
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+} 
 @media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
   .intro {
     flex-direction: row;
@@ -555,9 +583,9 @@ body.simple-mode .ocean video {
   }
   .logoPraxis {
     flex: 0 0 30%;
-    max-width: 15vw;   
-    margin: 3%;
-    margin-top: 10%;
+    /*max-width: 15vw;*/   
+    /*margin: 3%;*/
+    /*margin-top: 10%;*/
     float: left;
   }
 }
@@ -589,16 +617,14 @@ body.simple-mode .ocean video {
 .aboutMe {
   text-align: center; 
 }
-.leadingImage{
-  text-align: center; 
-}
-@media (min-width: 768px)/*IpadView*//*IpadView*/  
+
+/*@media (min-width: 768px)/*IpadView*//*IpadView  
     and (max-width:1032px) {
   .therapistsBackground{ 
     float: left;
     height:85vw;
-    margin-left: 5%;
-    margin-right: 5%;
+   
+   
   }
   .therapist{
     width: 40%;
@@ -616,35 +642,52 @@ body.simple-mode .ocean video {
     margin-top: 2%;
     padding: 2%;
   }
-}  
+}  */
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine)  {/*DesktopView*//*DesktopView*/
-  .therapistsBackground{ 
-    float: left;
-    height:auto;
+  .therapistsBackground{
+    display: flex;
+    flex-wrap: wrap;          /* ✅ erlaubt 2. Zeile */
+    align-items: flex-start;  /* ✅ oben ausrichten */
     width: 90%;
-    margin-left: 0%;
-    margin-right: 0%;  
+    background-color: rgb(218, 228, 246);
+    padding: 5%;
+    gap: 2rem;
+  
   }
+  
+  /* links: Kreis */
   .therapist{
-    width: 20%;
-    float: left;
-    margin: 2%;
+    flex: 0 0 20%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
   }
+  
+  .therapist img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* rechts: Text neben Kreis */
   .aboutMe{
-    text-align: left;
-    width: 70%;
-    float: left;  
+    flex: 1 1 0;              /* ✅ nimmt restliche Breite */
+    min-width: 280px;         /* ✅ verhindert, dass es zu schmal wird */
+    padding: 0;               /* optional: sonst wird’s schnell zu breit */
   }
+  
+  /* darunter: volle Breite */
   .leadingImage{
-    float: left;
-    text-align: left; 
-    margin-top: 2%;
-    padding: 2%;
+    flex: 0 0 100%;           /* ✅ immer neue Zeile, volle Breite */
+    width: 100%;
+    margin-top: 1rem;
+    /* ❌ float raus */
   }
-} 
-
+  
 @media (orientation: landscape)  {/*IpadLandscapeView*//*IpadLandscapeView*/
-  .therapistsBackground{ 
+  /*.therapistsBackground{ 
     float: left;
     height:auto; 
   }
@@ -663,7 +706,7 @@ body.simple-mode .ocean video {
     text-align: left; 
     margin-top: 2%;
     padding: 2%;   
-  }  
+  } */ 
 } 
 
 
@@ -1039,4 +1082,5 @@ body.simple-mode .contact {
 }
 .impressum a:hover {
   text-decoration: underline;
+}
 }
