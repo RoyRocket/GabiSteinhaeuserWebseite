@@ -6,8 +6,7 @@
 html {
   font-size: calc(100% * var(--fontScale)); 
   scroll-behavior: smooth;
-  margin-left: auto;
-    margin-right: auto;
+ 
 }
 
 body {
@@ -133,7 +132,6 @@ body {
   font-size: 100%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  backdrop-filter: blur(4px);
   transition: background 0.3s ease;
    backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(2px);
@@ -173,8 +171,7 @@ body {
   -webkit-backdrop-filter: blur(2px); 
 }
 body.simple-mode video,
-body.simple-mode img,
-body.simple-mode .praxis img {
+body.simple-mode img {
   visibility: hidden;
 }
 body.simple-mode {
@@ -185,9 +182,8 @@ body.simple-mode * {
   background: none;
 }
 body.simple-mode .welcome,
-body.simple-mode .about
-body.simple-mode .section
-body.simple-mode .sectionDiv { 
+body.simple-mode .about,
+body.simple-mode .section { 
   color: black;
   background: none;
   transform: none;
@@ -222,7 +218,6 @@ body.simple-mode .sectionDiv {
   font-size: 100%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  backdrop-filter: blur(4px);
   transition: background 0.3s ease;
    backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(2px);
@@ -314,12 +309,7 @@ body.simple-mode .sectionDiv {
     visibility: visible;
     transform: translateY(0);
   }
-}@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
-  .burger-menu:hover .menu-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
+
   .menu-content a{
     font-size: 1rem;
     
@@ -385,10 +375,7 @@ body.simple-mode .sectionDiv {
   overflow: hidden;
   position: relative;
 }
-body.simple-mode .ocean video {
-  display: none;
-  animation: kenburns 20s ease-in-out infinite;
-}
+
 .ocean video{
   width: 100%;
   height: auto;
@@ -728,8 +715,6 @@ body.simple-mode .ocean video {
 }
 
 .sections {
-  
- 
   width: 80%;
   height: auto;
   text-align: center;
@@ -790,6 +775,7 @@ body.simple-mode .ocean video {
   }
   .sections {
     flex: 0 0 auto;
+    
   }
   .treatments {margin-top: -0%;}
 
@@ -802,13 +788,6 @@ body.simple-mode .ocean video {
 #aboutMe{
   scroll-margin-top: 400px;
 }
-.therapistsBackground1 {
-  background-color: rgb(218, 228, 246);
-  padding: 5%;
-  height: auto;
-  margin: 0;
-  
-}
 body.simple-mode .therapistsBackground1 {
   background-image: none !important;
   background-color: white
@@ -820,7 +799,7 @@ body.simple-mode .therapistsBackground1 {
   padding: 2%;
   
    
-  margin-bottom: 2%;
+  /*margin-bottom: 2%;*/
 }
 .therapist1 {
   width: 50%;           
@@ -910,18 +889,15 @@ body.simple-mode .therapistsBackground1 {
   height: auto;              
 }
 .slideshow {
-  display: none;
+  display: block;
   position: relative;
-  width: 90%;
+  width: 100%;
   height: auto;              
   aspect-ratio: 4 / 3;       
   overflow: hidden;
   border-radius: 5%;
 }
-.slideshow:first-child {
-  display: block;
-  margin-left: 5%;
-}
+
 .slideshow img {
   position: absolute;
   inset: 0;
@@ -989,8 +965,7 @@ body.simple-mode .therapistsBackground1 {
 }
 .contactImage img {
   width: 40vw;
-  opacity: 0.5
-  8;
+  opacity: 0.58;
   animation: kenburns 20s ease-in-out infinite;
   margin-top: 5%;
   margin-bottom: 5%; 
