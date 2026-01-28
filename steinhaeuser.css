@@ -655,6 +655,7 @@ body.simple-mode .section {
   .leadingImage{
     flex: 0 0 100%;
     width: 100%;
+    text-align: center;
   }
   
   /*@media (min-width: 768px) and (max-width: 1032px) and (orientation: landscape)  {/*IpadLandscapeView*//*IpadLandscapeView*/
