@@ -4,7 +4,7 @@
 :root { --fontScale: 1; }
 
 html {
-  font-size: calc(100% * var(--fontScale)); /* 100% = Browser-Default (meist 16px) */
+  font-size: calc(100% * var(--fontScale)); 
   scroll-behavior: smooth;
   margin-left: auto;
     margin-right: auto;
@@ -13,13 +13,12 @@ html {
 body {
   
   background: white;
-  font-size: 1rem; /* statt 3.5vw */
-  max-width: 1000px;   /* hier stellst du die Grenze ein */
-  margin: 0 auto;      /* zentriert */
+  font-size: 1rem; 
+  max-width: 1000px;   
+  margin: 0 auto;     
   width: 100%;
  
 }
-
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/ 
     and (max-width:1032px) {
@@ -35,7 +34,6 @@ body {
   html {
     margin-left: 5vw;
     margin-right: 5vw;
- 
   }
   body p {
     font-size: 1rem;
@@ -52,10 +50,9 @@ body {
   }
   .accessibility-widget {
     margin-right: 6%;
-  }
-
-  
+  }  
 }
+
 @media (orientation: landscape) {/*IpadLandscapeView*//*IpadLandscapeView*/
   body p {
     font-size: 1rem;
@@ -102,30 +99,22 @@ body {
   padding: 5%;
   margin: 0 auto;
   width: 50%;
-  
+}
 
-  
-  
-}
-@media (min-width: 768px)/*IpadView*//*IpadView*/ 
-    and (max-width:1032px) {
-     
-}
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/ 
   #popUpOkBtn {
     padding: 1%;  
     font-size: 20px;
   }
   .popup-content{
-    width:50%
-    
-    
+    width:50% 
   }
 }
 
 /* Accessbility Widget *//* Accessbility Widget */
 /* Accessbility Widget *//* Accessbility Widget */
 
+/*MobileFirst*//*MobileFirst*/
 .accessibility-widget {
   position: fixed;
   bottom: 1%;
@@ -133,11 +122,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end; 
-  z-index: 200;
-  
+  z-index: 200; 
 }
 #accessibility-btn {
-  
   background:transparent;
   color: black;
   border: none;
@@ -163,7 +150,7 @@ body {
   width: 70%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(2px);
 }
 .accessibility-menu button {
@@ -196,7 +183,6 @@ body.simple-mode {
 body.simple-mode * {
   background-image: none !important;
   background: none;
-
 }
 body.simple-mode .welcome,
 body.simple-mode .about
@@ -242,7 +228,6 @@ body.simple-mode .sectionDiv {
   -webkit-backdrop-filter: blur(2px);
 }
 
-
 /* BurgerDropDownMenu *//* BurgerDropDownMenu */
 /* BurgerDropDownMenu *//* BurgerDropDownMenu */
 
@@ -255,8 +240,7 @@ body.simple-mode .sectionDiv {
   padding: 2.5%;
   z-index: 100;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(1px);
-  
+  -webkit-backdrop-filter: blur(1px); 
 }
 .burger-icon {
   
@@ -265,8 +249,7 @@ body.simple-mode .sectionDiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 .burger-icon span {
   display: block;
@@ -274,20 +257,19 @@ body.simple-mode .sectionDiv {
   width: 100%;
   background-color: #333;
   border-radius: 2px;
-  transition: background 0.3s;
-  
+  transition: background 0.3s; 
 }
 .menu-content {
   position: absolute;
   top: 35px;
   left: 0;
-  background-color: transparent; /* Vollständig transparent */
+  background-color: transparent; 
   padding: 10px;
   border-radius: 8px;
   min-width: 150px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional leichter Schatten */
-  backdrop-filter: blur(10px); /* Unscharfer Hintergrund bleibt */
-  -webkit-backdrop-filter: blur(10px); /* Safari-Support */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   z-index: 10;
   opacity: 0;
   visibility: hidden;
@@ -312,7 +294,7 @@ body.simple-mode .sectionDiv {
   background: none;
 }
 
-@media (min-width: 768px)/*IpadView*//*IpadView*/
+@media (min-width: 768px)
     and (max-width:1032px) {
   .menu-content {
     opacity: 0;
@@ -527,9 +509,7 @@ body.simple-mode .ocean video {
         gap: 2rem;
         justify-content: center;
       }
-      .logoPraxis {
-        /*flex: 0 0 30%;*/
-        /*max-width: 30vw;*/   
+      .logoPraxis {  
         margin: 0;
         float: left;
       }
@@ -581,9 +561,6 @@ body.simple-mode .ocean video {
   }
   .logoPraxis {
     flex: 0 0 30%;
-    /*max-width: 15vw;*/   
-    /*margin: 3%;*/
-    /*margin-top: 10%;*/
     float: left;
   }
 }
@@ -602,8 +579,8 @@ body.simple-mode .ocean video {
   margin-bottom: 2%;
 }
 .therapist {
-  width: 50%;           /* oder %, max-width etc. */
-  aspect-ratio: 1 / 1;   /* 🔒 macht immer ein Quadrat */
+  width: 50%;           
+  aspect-ratio: 1 / 1;   
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -615,10 +592,11 @@ body.simple-mode .ocean video {
 .therapist img {
   display: block;
   /*max-width: 200px;*/   
-  width: 50%;        
+  width: 90%;        
   margin:  auto;  
   height: auto;
   border-radius: 100%;
+  animation: kenburns 20s ease-in-out infinite; 
 
 }
 .aboutMe {
@@ -653,8 +631,8 @@ body.simple-mode .ocean video {
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine)  {/*DesktopView*//*DesktopView*/
   .therapistsBackground{
     display: flex;
-    flex-wrap: wrap;          /* ✅ erlaubt 2. Zeile */
-    align-items: flex-start;  /* ✅ oben ausrichten */
+    flex-wrap: wrap;          
+    align-items: flex-start;  
     width: 90%;
     background-color: rgb(218, 228, 246);
     padding: 5%;
@@ -662,7 +640,7 @@ body.simple-mode .ocean video {
    }
   
   
-  /* links: Kreis */
+  
   .therapist{
     flex: 0 0 20%;
     max-width: 300px;
@@ -679,14 +657,14 @@ body.simple-mode .ocean video {
     animation: kenburns 20s ease-in-out infinite; 
   }
 }
-  /* rechts: Text neben Kreis */
+ 
   .aboutMe{
-    flex: 1 1 0;              /* ✅ nimmt restliche Breite */
-    min-width: 280px;         /* ✅ verhindert, dass es zu schmal wird */
-    padding: 0;               /* optional: sonst wird’s schnell zu breit */
+    flex: 1 1 0;             
+    min-width: 280px;         
+    padding: 0;               
   }
   
-  /* darunter: volle Breite */
+ 
   .leadingImage{
     flex: 0 0 100%;
     width: 100%;
@@ -835,20 +813,34 @@ body.simple-mode .therapistsBackground1 {
   background-image: none !important;
   background-color: white
 }
+.therapistsBackground1 {
+  background-color: rgb(218, 228, 246);
+  padding-top: 10%;
+  height: auto; 
+  padding: 2%;
+  
+   
+  margin-bottom: 2%;
+}
 .therapist1 {
-  width: 100%;
-  padding-top: 12%;
-  padding-bottom: 12%;
+  width: 50%;           
+  aspect-ratio: 1 / 1;   
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
 }
 .therapist1 img {
-  width: 70%;
+  display: block;  
+  width: 90%;        
+  margin:  auto;  
+  height: auto;
   border-radius: 100%;
   animation: kenburns 20s ease-in-out infinite; 
-  margin-bottom: 7%;
-  margin: 0 auto; 
+
 }
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/
@@ -886,7 +878,7 @@ body.simple-mode .therapistsBackground1 {
     width: 100%;  
   }
 }
-@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .therapistsBackground1 {
     flex: 1 40%;   
     min-width: 0;   
@@ -947,32 +939,24 @@ body.simple-mode .therapistsBackground1 {
 
 @media (min-width: 768px)/*IpadView*//*IpadView*/  
     and (max-width:1032px) {
-      /*.slideshow {
-        
-      }*/
       .slides-container{
         height: 25vh;
       }
 }
-   /*@media (min-width: 768px) and (max-width: 1032px) and (orientation: landscape) {
-  .slides-container{ display: flex; }
-  .slideshow{ width: 30%; }
-}*/
-@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*/
+
+@media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .slides-container{
-    display: block;        /* statt flex */
+    display: block;       
     width: 100%;
     margin-bottom: 1%;
-   
   }
   
   .slideshow{
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;   /* erzeugt echte Höhe */
+    aspect-ratio: 4 / 3;   
     position: relative;
-    overflow: hidden;
-    
+    overflow: hidden;  
   }
   
   .slideshow img{
@@ -980,20 +964,13 @@ body.simple-mode .therapistsBackground1 {
     inset: 0;
     width: 100%;
     height: 100%;
-              /* wichtig: nicht auto */
     object-fit: cover;
   }
-  
-  
-  
-  
- 
+
   .slideshow:first-child {
     margin-left: 0%;  
   }
 }
-
-
 
 /*ContactSection*//*ContactSection*/
 /*ContactSection*//*ContactSection*/
