@@ -309,6 +309,9 @@ body.simple-mode .section {
     visibility: visible;
     transform: translateY(0);
   }
+  .burger-menu {
+    left: 0%;
+  }
 
   .menu-content a{
     font-size: 1rem;
@@ -354,6 +357,9 @@ body.simple-mode .section {
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {
   .phone-contact a {
     font-size: 1.5rem;
+  }
+  .phone-contact{
+    right: 0%;
   } 
 }
 
