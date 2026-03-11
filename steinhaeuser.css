@@ -462,7 +462,7 @@ body.simple-mode .section {
 
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
   .welcome p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
 }
@@ -567,9 +567,11 @@ body.simple-mode .section {
   padding-top: 10%;
   height: auto; 
   padding: 2%;
-  
-   
   margin-bottom: 2%;
+}
+.therapistsBackground h2 {
+  font-size: 1.5vw;
+
 }
 .therapist {
   width: 50%;           
@@ -698,6 +700,9 @@ body.simple-mode .section {
   
   /* auf Mobile noch kein Flex-Layout */
 }
+.sections h2 {
+  font-size: 1.5vw;
+}
 
 .sectionsDiv {
   width: 100%;
@@ -807,6 +812,10 @@ body.simple-mode .therapistsBackground1 {
   
    
   /*margin-bottom: 2%;*/
+}
+.therapistsBackground1 h2 {
+  font-size: 1.5vw;
+
 }
 .therapist1 {
   width: 50%;           
@@ -961,7 +970,9 @@ body.simple-mode .therapistsBackground1 {
 /*MobileFirst*//*MobileFirst*/
 #contact {
   scroll-margin-top: 250px;
- 
+}
+.contact p {
+  
 }
 .contactImage {
   width: 100%;
