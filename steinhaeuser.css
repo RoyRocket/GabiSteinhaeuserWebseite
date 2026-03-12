@@ -569,10 +569,7 @@ body.simple-mode .section {
   padding: 2%;
   margin-bottom: 2%;
 }
-.therapistsBackground h2 {
-  font-size: 1.5vw;
 
-}
 .therapist {
   width: 50%;           
   aspect-ratio: 1 / 1;   
@@ -633,6 +630,10 @@ body.simple-mode .section {
     padding: 5%;
     gap: 2rem;
    }
+   .therapistsBackground h2 {
+    font-size: 1.5vw;
+  
+  }
   
   
   
@@ -700,9 +701,7 @@ body.simple-mode .section {
   
   /* auf Mobile noch kein Flex-Layout */
 }
-.sections h2 {
-  font-size: 1.5vw;
-}
+
 
 .sectionsDiv {
   width: 100%;
@@ -790,7 +789,9 @@ body.simple-mode .section {
     
   }
   .treatments {margin-top: -0%;}
-
+  .sections h2 {
+    font-size: 1.5vw;
+  }
 }
 
 /*VitaOfTherapist*//*VitaOfTherapist*/
@@ -813,10 +814,7 @@ body.simple-mode .therapistsBackground1 {
    
   /*margin-bottom: 2%;*/
 }
-.therapistsBackground1 h2 {
-  font-size: 1.5vw;
 
-}
 .therapist1 {
   width: 50%;           
   aspect-ratio: 1 / 1;   
@@ -871,6 +869,10 @@ body.simple-mode .therapistsBackground1 {
   }
   .vita1 {
     width: 100%;  
+  }
+  .therapistsBackground1 h2 {
+    font-size: 1.5vw;
+  
   }
 }
 @media (min-width: 574px) and (any-hover: hover) and (any-pointer: fine) {/*DesktopView*//*DesktopView*/
